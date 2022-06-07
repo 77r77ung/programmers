@@ -6,9 +6,27 @@
 
 '''
 
-
-
 def solution(arr1, arr2):
-    
+    answer = []
 
-solution(arr1 = [[1, 2], [2, 3]], arr2 = [[3, 4], [5, 6]])
+    for i, j in zip(arr1, arr2):
+        temp = []
+        for x, y in zip(i, j):
+            temp.append(x+y)
+        answer.append(temp)
+
+    return answer
+
+'''
+arr1 = [[1, 2], [2, 3]]
+arr2 = [[3, 4], [5, 6]]
+answer = []
+
+for i in range(len(arr1)):
+    temp = []
+    for j in range(len(arr1[0])):
+        temp.append(arr1[i][j] + arr2[i][j])
+    answer.append(temp)
+
+print(answer)
+'''
